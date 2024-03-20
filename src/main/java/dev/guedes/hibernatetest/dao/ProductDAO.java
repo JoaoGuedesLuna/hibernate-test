@@ -19,7 +19,7 @@ public interface ProductDAO {
 
     List<Product> findAllByNameContaining(String name) throws DatabaseException;
 
-    List<Product> findAllByNameStartingWithAndBetweenMinAndMaxPrice(String name, BigDecimal minPrice, BigDecimal maxPrice) throws DatabaseException;
+    List<Product> findAllByNameStartingWithAndPriceBetween(String name, BigDecimal minPrice, BigDecimal maxPrice) throws DatabaseException;
 
     void delete(Product product) throws DatabaseException;
 

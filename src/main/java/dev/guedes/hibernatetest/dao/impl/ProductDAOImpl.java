@@ -76,7 +76,7 @@ public class ProductDAOImpl implements ProductDAO {
     }
 
     @Override
-    public List<Product> findAllByNameStartingWithAndBetweenMinAndMaxPrice(String name, BigDecimal minPrice, BigDecimal maxPrice) throws DatabaseException {
+    public List<Product> findAllByNameStartingWithAndPriceBetween(String name, BigDecimal minPrice, BigDecimal maxPrice) throws DatabaseException {
         try (Session session = this.sessionFactory.openSession()) {
             CriteriaBuilder builder = session.getCriteriaBuilder();
             CriteriaQuery<Product> query = builder.createQuery(Product.class);
